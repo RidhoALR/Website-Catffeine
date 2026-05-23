@@ -618,22 +618,22 @@ body{
         margin-top: 2rem;
     }
     .sofa{
-        width: 5rem;
+        width: 4rem;
     }
     .sofa-tag{
-        font-size: 18px;
+        font-size: 14px;
     }
     .sofa-desc{
-        font-size: 12px;
+        font-size: 10px;
     }
     .wifi{
-        width: 5rem;
+        width: 4rem;
     }
     .wifi-tag{
-        font-size: 18px;
+        font-size: 14px;
     }
     .wifi-desc{
-        font-size: 12px;
+        font-size: 10px;
     }
     .text-box{
         margin-right: 5rem;
