@@ -263,6 +263,27 @@ body{
     display: flex;
     flex-direction: column;
 }
+.wifi{
+    width: 7rem;
+}
+.wifi-tag{
+    font-weight: 500; 
+    font-size: 24px;
+}
+.wifi-desc{
+    color: #514841;
+}
+.sofa{
+    width: 7rem;
+}
+.sofa-tag{
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+.sofa-desc{
+    color: white;
+}
 .nd-box{
     display: flex;
     flex-direction: row;
@@ -514,7 +535,7 @@ body{
 /* ══════════════════════════════════
    MOBILE — max 768px
 ══════════════════════════════════ */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
 
     /* NAV: hide links, show hamburger */
     .nav {
@@ -595,6 +616,24 @@ body{
         flex-direction: column;
         padding: 0 1.5rem;
         margin-top: 2rem;
+    }
+    .sofa{
+        width: 5rem;
+    }
+    .sofa-tag{
+        font-size: 18px;
+    }
+    .sofa-desc{
+        font-size: 12px;
+    }
+    .wifi{
+        width: 5rem;
+    }
+    .wifi-tag{
+        font-size: 18px;
+    }
+    .wifi-desc{
+        font-size: 12px;
     }
     .text-box{
         margin-right: 5rem;
