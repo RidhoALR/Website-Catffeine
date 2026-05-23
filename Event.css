@@ -299,7 +299,8 @@ body{
         height: 18rem;
     }
     .event {
-        width: 95%;
-        font-size: 16px;
+        width: 10rem;
+        font-size: 18px;
+        margin: 2rem;
     }
 }
