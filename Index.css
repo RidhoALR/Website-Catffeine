@@ -628,7 +628,7 @@ body{
     }
     .sofa-tag{
         font-size: 18px;
-        margin: 1rem;
+        margin: 0rem 1rem 1rem 1rem;
     }
     .sofa-desc{
         font-size: 12px;
@@ -639,7 +639,7 @@ body{
     }
     .wifi-tag{
         font-size: 18px;
-        margin: 1rem;
+        margin: 0rem 1rem 1rem 1rem;
     }
     .wifi-desc{
         font-size: 12px;
