@@ -11,6 +11,10 @@
     font-family: Chillax;
     src: url(Chillax-Variable.ttf);
 }
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -527,6 +531,7 @@ body{
         flex-direction: column;
         margin-top: 4rem;
         margin-bottom: 2rem;
+        margin-right: 2rem;
     }
     .menu-item {
         width: 100%;
@@ -539,18 +544,20 @@ body{
         gap: 2rem;
     }
     .recommended {
-        width: 100%;
+        width: 90%;
         height: auto;
         margin-top: 2rem;
+        margin-left: 1rem;
     }
     .rec-img {
         width: 100%;
         border-radius: 25px;
     }
     .items-list {
-        width: 100%;
+        width: 90%;
         margin-bottom: 2rem;
         margin-top: 4rem;
+        margin-left: 1rem;
     }
     .item-desc {
         font-size: 18px;
@@ -561,19 +568,23 @@ body{
 
     /* Pastries: stack vertically */
     .snk {
-        width: 100%;
+        width: 80%;
         flex-direction: column;
         padding: 1rem;
+        margin-left: 1rem;
     }
     .food-img {
-        width: 100%;
-        height: 12rem;
+        width: 80%;
+        height: 18rem;
         object-fit: cover;
         margin-left: 0;
     }
+    .pastrie{
+        margin-bottom: 5rem;
+    }
     .item-tag-snk {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.1rem;
     }
 
     /* Snack recommended image */
