@@ -508,7 +508,7 @@ body{
         width: 85%;
         max-width: 320px;
         height: 25rem;
-        margin-right: 0;
+        margin-right: 2rem;
         transform: rotate(0deg);
     }
 
@@ -582,12 +582,12 @@ body{
     .pastrie{
         margin-bottom: 5rem;
     }
-    pastrie-desc{
-        font-size: 12px;
+    .pastrie-desc{
+        font-size: 18px;
     }
     .item-tag-snk {
         flex-direction: column;
-        gap: 0.1rem;
+        gap: 1px;
     }
 
     /* Snack recommended image */
