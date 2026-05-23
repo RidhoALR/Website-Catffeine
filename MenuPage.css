@@ -582,6 +582,9 @@ body{
     .pastrie{
         margin-bottom: 5rem;
     }
+    pastrie-desc{
+        font-size: 12px;
+    }
     .item-tag-snk {
         flex-direction: column;
         gap: 0.1rem;
