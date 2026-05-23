@@ -535,7 +535,7 @@ body{
 /* ══════════════════════════════════
    MOBILE — max 768px
 ══════════════════════════════════ */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
     /* NAV: hide links, show hamburger */
     .nav {
