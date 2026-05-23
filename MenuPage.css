@@ -482,7 +482,6 @@ body{
     /* HERO: stack vertically */
     .st-content-container {
         flex-direction: column;
-        align-items: center;
         margin-top: 2rem;
     }
     .left-content {
@@ -502,16 +501,22 @@ body{
     }
     .right-content {
         display: flex;
-        justify-content: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 2rem;
     }
     .menu-page-guy {
         width: 85%;
-        max-width: 320px;
-        height: 25rem;
-        margin-left: 1rem;
+        max-width: 250px;
+        height: 20rem;
         transform: rotate(0deg);
+        background-size: 20rem;
     }
+    :hover.menu-page-guy{
+    transform: rotate(0deg) translateY(-5px);
+    background-size: 25rem;
+}
 
     /* Cat toys: hide on mobile, they overlap */
     .toy-1, .toy-2, .toy-3, .toy-4 {
