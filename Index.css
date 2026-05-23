@@ -11,6 +11,10 @@
     font-family: Chillax;
     src: url(Chillax-Variable.ttf);
 }
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -376,6 +380,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
 }
 .cat-pic{
     width: 20rem;
@@ -410,6 +415,7 @@ body{
 }
 .dua{
         background-image: url(Img/second-cat.jpeg);
+        margin-right: 4rem;
 }
 .dua:hover{
         background-image: url(Img/second-cat.jpeg);
@@ -618,22 +624,22 @@ body{
         margin-top: 2rem;
     }
     .sofa{
-        width: 4rem;
+        width: 5rem;
     }
     .sofa-tag{
-        font-size: 14px;
+        font-size: 18px;
     }
     .sofa-desc{
-        font-size: 10px;
+        font-size: 12px;
     }
     .wifi{
-        width: 4rem;
+        width: 5rem;
     }
     .wifi-tag{
-        font-size: 14px;
+        font-size: 18px;
     }
     .wifi-desc{
-        font-size: 10px;
+        font-size: 12px;
     }
     .text-box{
         margin-right: 5rem;
@@ -651,7 +657,7 @@ body{
         width: 100%;
     }
     .nd-box {
-        width: 100%;
+        width: 90%;
         height: auto;
         margin-left: 0;
         flex-direction: column;
@@ -678,6 +684,7 @@ body{
     .cat-pic {
         width: 16rem;
         height: 20rem;
+        
     }
 
     /* FOOTER */
