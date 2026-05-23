@@ -247,7 +247,7 @@ body{
     /* OPEN SIGN */
     .open-sign {
         margin-top: 3rem;
-        margin-left: 1.5rem;
+        margin-left: 0rem;
         font-size: 14px;
     }
 
@@ -258,7 +258,7 @@ body{
         gap: 3rem;
     }
     .content {
-        margin-left: 1.5rem;
+        margin-left: 0rem;
     }
     .slogan {
         font-size: 52px;
@@ -271,20 +271,21 @@ body{
         height: 22rem;
         margin-right: 0;
         margin-top: 0;
+        margin-left: 0;
     }
 
     /* EVENTS LIST */
     .nd-content {
-        margin-left: 1.5rem;
+        margin-left: 0rem;
         margin-top: 4rem;
     }
     .up-event {
         font-size: 24px;
     }
     .event {
-        width: 10rem;
+        width: 20rem;
         font-size: 18px;
-        margin: 2rem;
+
     }
 }
 
@@ -299,8 +300,7 @@ body{
         height: 18rem;
     }
     .event {
-        width: 10rem;
-        font-size: 18px;
-        margin: 2rem;
+        width: 40%;
+        font-size: 16px;
     }
 }
