@@ -586,7 +586,7 @@ body{
     .rec {
         position: relative;
         margin-top: -5rem;
-        margin-left: 2rem;
+        margin-left: 5rem;
         transform: rotate(-2deg);
         width: 100%;
         max-width: 260px;
