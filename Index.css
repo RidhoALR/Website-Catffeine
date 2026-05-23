@@ -415,7 +415,6 @@ body{
 }
 .dua{
         background-image: url(Img/second-cat.jpeg);
-        margin-right: 5rem;
 }
 .dua:hover{
         background-image: url(Img/second-cat.jpeg);
@@ -628,7 +627,7 @@ body{
     }
     .sofa-tag{
         font-size: 18px;
-        margin: 0rem 1rem 1rem 1rem;
+        margin: 1rem;
     }
     .sofa-desc{
         font-size: 12px;
@@ -639,7 +638,7 @@ body{
     }
     .wifi-tag{
         font-size: 18px;
-        margin: 0rem 1rem 1rem 1rem;
+        margin: 1rem;
     }
     .wifi-desc{
         font-size: 12px;
@@ -693,6 +692,9 @@ body{
         height: 20rem;
         
     }
+    .dua{
+        margin-right: 4rem;
+}
 
     /* FOOTER */
     .footer {
