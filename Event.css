@@ -11,6 +11,10 @@
     font-family: Chillax;
     src: url(Chillax-Variable.ttf);
 }
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -280,6 +284,7 @@ body{
     .event {
         width: 90%;
         font-size: 18px;
+        margin-right: 1rem;
     }
 }
 
