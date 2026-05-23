@@ -102,7 +102,8 @@ body{
     width: 50rem;
     display: flex;
     flex-direction: column;
-    margin-top: 6rem
+    margin-top: 6rem;
+    margin-left: 5rem;
 }
 .menu-tagline{
     font-family: ClashDisplay;
@@ -111,7 +112,6 @@ body{
     margin-top: 3rem;
     font-weight: bolder;
     width: 60rem;
-    margin-left: 10rem;
 }
 .menu-description{
     font-family: Chillax;
@@ -120,7 +120,6 @@ body{
     margin-top: 1rem;
     width: 40rem;
     font-weight: 500;
-    margin-left: 10rem;
 }
 .menu-page-guy{
     background-image: url('Img/Menu-page-guy.jpg');
@@ -489,6 +488,7 @@ body{
     .left-content {
         width: 100%;
         margin-top: 2rem;
+        margin-left: 0rem;
     }
     .menu-tagline {
         font-size: 52px;
