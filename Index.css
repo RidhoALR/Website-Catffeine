@@ -626,23 +626,35 @@ body{
         width: 5rem;
     }
     .sofa-tag{
-        font-size: 14px;
-        margin: 0rem 1rem 0rem 1rem;
+        font-size: 18px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     .sofa-desc{
         font-size: 12px;
-        margin: 0rem 1rem 1rem 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     .wifi{
         width: 5rem;
     }
     .wifi-tag{
-        font-size: 14px;
-        margin: 0rem 1rem 0rem 1rem;
+        font-size: 18px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     .wifi-desc{
         font-size: 12px;
-        margin: 0rem 1rem 1rem 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     .text-box{
         margin-right: 5rem;
