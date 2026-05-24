@@ -215,7 +215,7 @@ body{
     position: absolute;
     top: -1.5rem;
     right: 0rem;
-    background-color: #FFF8F4;
+    background-color: #FAF5F0;
 }
 .menu-items{
     display: flex;
@@ -528,6 +528,9 @@ body{
         margin-left: 1.5rem;
         width: 95%;
     }
+    .category{
+        width: 90%;
+    }
     .category-title {
         font-size: 32px;
     }
@@ -554,6 +557,9 @@ body{
         height: auto;
         margin-top: 2rem;
         margin-left: 1rem;
+    }
+    .coffee-logo{
+        width: 40px;
     }
     .rec-img {
         width: 100%;
