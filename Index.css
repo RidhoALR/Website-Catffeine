@@ -276,6 +276,7 @@ body{
 }
 .wifi-desc{
     color: #514841;
+    marggin: 2rem;
 }
 .sofa{
     width: 7rem;
@@ -287,6 +288,7 @@ body{
 }
 .sofa-desc{
     color: white;
+    margin: 2rem;
 }
 .nd-box{
     display: flex;
