@@ -1,7 +1,6 @@
 @font-face {
     font-family: Alpino;
     src: url(Alpino-Variable.ttf);
-
 }
 @font-face {
     font-family: ClashDisplay;
@@ -25,12 +24,18 @@ body{
     box-sizing: border-box;
     font-family: Alpino;
 }
+
+/* ══════════════════════════════════
+   HEADER & NAVIGATION
+══════════════════════════════════ */
 .head_container{
     display: flex;
     background-color: #FFF8F4;
     justify-content: space-between;
     flex-direction: row;
     font-family: Alpino;
+    padding: 0 5%; /* Aligns perfectly with the grid below */
+    align-items: center;
 }
 .logo{
     width: 6rem;   
@@ -65,8 +70,9 @@ body{
 }
 .R_nav{
     display: flex;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
     gap: 20px;
+    align-items: center;
 }
 .Visit_us_btn{
     color: #FFF8F4;
@@ -74,10 +80,11 @@ body{
     border-radius: 2rem;
     background-image: linear-gradient(to right, #897361 0%,  #a18167 51%, #C0A793 100%);
     height:2.5rem;
-    width: 4rem;
+    width: 6rem; /* Expanded slightly to ensure text doesn't wrap or clip */
     font-weight: bold;
     font-size: 14px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 :hover.Visit_us_btn{
     transform: translateY(-2px);
@@ -91,11 +98,12 @@ body{
     height: 2.5rem;
     border: none;
     background-color: #ffffff00;
+    cursor: pointer;
 }
 .open-sign{
     display: flex;
     gap: 10px;
-    margin: 2rem;
+    margin: 2rem 5%; /* Aligns with screen edges */
     background-color: #F3DFCC;
     width: fit-content;
     font-size: 12px;
@@ -107,43 +115,57 @@ body{
 .cat-paw{
     width: 15px;
 }
-.content-container{
+
+/* ══════════════════════════════════
+   HERO / CONTENT SECTION
+══════════════════════════════════ */
+.content-container {
     display: flex;
     flex-direction: row;
-    gap: 10rem;
+    justify-content: space-between; /* Spreads content to far left and right edges */
+    align-items: center;
+    width: 100%;
+    max-width: 100%; 
+    padding: 2rem 5%;  /* Dynamic screen-edge buffer line */
+    box-sizing: border-box;
 }
-.content{
+.content {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
     color: #26190A;
-    font-size: 110px;
+    font-size: clamp(3.5rem, 5.5vw, 110px); 
     font-weight: bolder;
-    font-family:  ClashDisplay;
+    font-family: ClashDisplay;
+    flex: 1;
 }
-.slogan{
-    width: 64rem;
+.slogan {
+    width: 100%;          
+    max-width: 64rem;
 }
-.description{
+.description {
     font-size: 24px;
-    width:  30rem;
+    width: 100%;
+    max-width: 35rem;
     color: #3E2D1F;
     font-family: Chillax;
+    margin-top: 1rem;
 }
 .content-img {
     border-radius: 16px;
     position: relative;
+    flex-shrink: 0;
 }
-
 .princess {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;     
+    min-width: 340px;
+    height: auto;
+    display: block;
     transition: transform 0.4s ease;
 }
-
 .content-img:hover .princess {
     transform: rotate(2deg) scale(1.05); 
 }
-
 .cat-ear-wrapper {
     clip-path: polygon(
         0% 12%,
@@ -160,6 +182,8 @@ body{
     border-radius: 0 0 16px 16px;
     width: fit-content;
 }
+
+/* Floating Barista Card Badge */
 .rec{
     display: flex;
     flex-direction: row;
@@ -182,33 +206,51 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    flex-shrink: 0;
 }
 .rec-desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #4E453E;
     margin-left: 10px;
+    line-height: 1.3;
 }
-.sec-content{
+
+/* ══════════════════════════════════
+   SECOND SECTION (GRID DECK)
+══════════════════════════════════ */
+.sec-content {
     display: flex;
-    margin-top: 20rem;
-    padding-bottom: 2rem;
+    margin-top: 15rem;   
+    padding-bottom: 6rem;
     background-color: #FFF1E5;
     flex-direction: column;
+    width: 100%;
+}
+
+/* Header row layout context helper inside the secondary section */
+.sec-header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 5rem 5% 0 5%;
+    box-sizing: border-box;
 }
 .sec-tagline{
-    font-size: 72px;
+    font-size: clamp(2.5rem, 4.5vw, 72px);
     font-weight: bold;
     color: #26190A;
-    width: 50rem;
-    margin: 5rem 2rem 0rem 2rem;
+    max-width: 50rem;
+    margin: 0;
 }
 .sec-p{
     font-size: 24px;
-    width: 30rem;
+    max-width: 30rem;
     color: #3E2D1F;
     font-family: Chillax;
-    margin-left: 2rem;
+    margin: 1rem 0 0 0;
 }
 .menu-btn{
     color :#6F5A4E;
@@ -216,26 +258,40 @@ body{
     align-items: center;
     font-size: 24px;
     font-weight: 500;
-    margin-right: 10rem;
+    text-decoration: none;
+    white-space: nowrap;
 }
 .r-arrow{
-    margin-left: 5px;
+    margin-left: 8px;
     transition: transform 0.3s ease-in-out;
 }
 .menu-btn:hover .r-arrow{
     transform: translateX(5px);
-    transition: transform 0.3s ease-in-out;
 }
-.box-section{
+
+/* Card Section Frame Layout */
+.box-section {
     display: flex;
-    margin-top: 5rem;
+    flex-direction: row;
+    justify-content: space-between; /* Spreads cards fully across margins */
+    gap: 3rem;          
+    padding: 0 5%;
+    width: 100%;
+    margin-top: 4rem;
+    box-sizing: border-box;
 }
-.l-box{
-    width: 57rem;
+
+/* LEFT SIDE BIG IMAGE BOX */
+.l-box {
+    flex: 1;               
+    max-width: 57rem;     
     height: 57rem;
     border-radius: 16px;
-    margin: 0 0 0 2rem;
+    margin: 0;           
     background-image: url("Img/books-and-cats-v0-r446j1r9a8941.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;    
 }
 .cat-cover{
     width: 100%;
@@ -252,9 +308,9 @@ body{
     flex-direction: column;
     margin: 2rem 0rem 0rem 2rem;
     position: absolute;
+    z-index: 2;
 }
 .st-box-tag{
-    font-size: 32px;
     font-weight: bold;
     color: #26190A;
     font-family: ClashDisplay;
@@ -262,114 +318,134 @@ body{
     width: fit-content;
     font-size: 40px;
     margin-bottom: 0.3rem;
+    padding: 0 10px;
 }
-.r-box{
+
+/* RIGHT SIDE CARD CONTAINER WRAPPER */
+.r-box {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    flex: 1;              
+    max-width: 57rem;
 }
-.wifi{
-    width: 7rem;
-}
-.wifi-tag{
-    font-weight: 500; 
-    font-size: 24px;
-}
-.wifi-desc{
-    color: #514841;
-    margin: 2rem;
-}
-.sofa{
-    width: 7rem;
-}
-.sofa-tag{
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-.sofa-desc{
-    color: white;
-    margin: 2rem;
-}
-.nd-box{
+.nd-box {
     display: flex;
     flex-direction: row;
-    width: 57rem;
+    width: 100%;      
     height: 28rem;
     border-radius: 16px;
-    margin: 0 0 0 2rem;
+    margin: 0;    
     background-color: #F6E6DB;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 .nd-box-l{
     display: flex;
     align-items: baseline;
     justify-content: center;
     flex-direction: column;
+    padding: 2rem;
 }
 .nd-box-tag{
-    font-size: 32px;
     font-weight: bold;
     color: #26190A;
     font-family: ClashDisplay;
     background-color: #C9BBE1;
     width: fit-content;
     font-size: 32px;
-    margin-left: 2rem;
+    padding: 0 10px;
 }
 .nd-box-desc{ 
     font-size: 18px;
-    margin-left: 2rem;
+    margin-top: 1rem;
     font-weight: 500;
 }
 .nd-box-r{
     display: flex;
     align-items: center;
-    justify-content: end;
-    width: 18rem;
+    justify-content: center;
+    padding-right: 2rem;
 }
 .snack{
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 3rem;
-    transform:  rotate(4deg);
+    transform: rotate(4deg);
+    object-fit: cover;
 }
 .nd-box:hover .snack{
     transform: rotate(0deg);
     transition: transform 0.2s ease-in-out;
 }
-.rd-box{
+
+/* BOTTOM SQUARES LAYOUT FRAME */
+.r-box > div:last-child {
     display: flex;
-    flex-direction: column;
-    width: 27rem;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+.rd-box, .th-box {
+    flex: 1;        
+    width: 100%;
     height: 27rem;
     border-radius: 16px;
-    margin: 2rem 0 0 2rem;
+    margin: 0;         
     background-color: #F3DFCC;
-    justify-content: center;
-    align-items: center;
-    font-family: Alpino;
-}
-.th-box{
     display: flex;
     flex-direction: column;
-    width: 27rem;
-    height: 27rem;
-    border-radius: 16px;
-    margin: 2rem 0 0 2rem;
-    background-color: #6F5A4A;
     justify-content: center;
     align-items: center;
     font-family: Alpino;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
 }
+.th-box {
+    background-color: #6F5A4A;
+}
+.wifi{
+    width: 7rem;
+    margin-bottom: 1rem;
+}
+.wifi-tag{
+    font-weight: bold; 
+    font-size: 24px;
+    color: #26190A;
+}
+.wifi-desc{
+    color: #514841;
+    margin: 1rem 0 0 0;
+}
+.sofa{
+    width: 7rem;
+    margin-bottom: 1rem;
+}
+.sofa-tag{
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+.sofa-desc{
+    color: #E2D4C9;
+    margin: 1rem 0 0 0;
+}
+
+/* ══════════════════════════════════
+   THIRD SECTION (GALLERY)
+══════════════════════════════════ */
 .third-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #FFF8F4;
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 5rem 5%;
 }
 .trd-tagline{
-    font-size: 72px;
+    font-size: clamp(2.5rem, 4.5vw, 72px);
     font-weight: bold;
     color: #26190A;
     font-family: ClashDisplay;
@@ -377,12 +453,13 @@ body{
 }
 .gallery{
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 5rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    width: 100%;
 }
 .cat-pic{
     width: 20rem;
@@ -391,69 +468,43 @@ body{
     background-color: blueviolet;
     background-size: cover;
     background-position: center;
-    background-size: 35rem;
     transition: all 0.3s ease-in-out;
 }
 .cat-name{
     color: #26190A; 
     font-weight: 500; 
     font-size: 24px;
-    margin-left: 1rem;
+    margin-top: 1rem;
     font-style: italic;
 }
 .title-cat{
     color: #4E453E; 
     font-weight: 500; 
     font-size: 18px;
-    margin-left: 1.5rem;
+    margin-top: 0.2rem;
 }
-.satu{
-        background-image: url(Img/first-cat.jpeg);
+.satu { background-image: url(Img/first-cat.jpeg); }
+.dua { background-image: url(Img/second-cat.jpeg); }
+.tiga { background-image: url(Img/third-cat.jpeg); }
+.empat { background-image: url(Img/fourth-cat.jpeg); }
+.lima { background-image: url(Img/fifth-cat.jpeg); }
+
+.cat-pic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-.satu:hover{
-        background-image: url(Img/first-cat.jpeg);
-        background-size: 30rem;
-        background-position: center;
-}
-.dua{
-        background-image: url(Img/second-cat.jpeg);
-}
-.dua:hover{
-        background-image: url(Img/second-cat.jpeg);
-        background-size: 30rem;
-        background-position: center;
-}
-.tiga{
-        background-image: url(Img/third-cat.jpeg);
-}
-.tiga:hover{
-        background-image: url(Img/third-cat.jpeg);
-        background-size: 30rem;
-        background-position: center;
-}
-.empat{
-        background-image: url(Img/fourth-cat.jpeg);
-}
-.empat:hover{
-        background-image: url(Img/fourth-cat.jpeg);
-        background-size: 30rem;
-        background-position: center;
-}
-.lima{
-        background-image: url(Img/fifth-cat.jpeg);
-}
-.lima:hover{
-        background-image: url(Img/fifth-cat.jpeg);
-        background-size: 30rem;
-        background-position: center;
-}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
 .footer{
     display: flex;
     background-color: #f39b68;
-    padding: 2rem;
+    padding: 3rem 5%;
     font-family: Alpino;
     color: #26190A;
     justify-content: space-between;
+    align-items: center;
 }
 .footer-tag{
     font-size: 24px;
@@ -465,11 +516,12 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 0.5rem;
     font-family: Alpino;
     font-size: 24px;
     font-weight: 500;
 }
+
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -504,38 +556,44 @@ body{
     font-weight: 500;
 }
 
-
 /* ══════════════════════════════════
    TABLET — max 1024px
 ══════════════════════════════════ */
 @media (max-width: 1024px) {
-    .content {
-        font-size: 72px;
-    }
-    .princess {
-        width: 400px;
-    }
     .content-container {
+        flex-direction: column-reverse; 
+        text-align: center;
         gap: 4rem;
+        padding: 4rem 5%;
     }
-    .sec-tagline {
-        font-size: 52px;
-        width: 100%;
+    .content {
+        align-items: center;
+    }
+    .rec {
+        left: 50%;
+        transform: translateX(-50%) rotate(-3deg); 
+        bottom: -2rem;
+    }
+    .sec-header-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .box-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem; 
     }
     .l-box {
-        width: 45rem;
-        height: 45rem;
-    }
-    .cat-cover {
         width: 100%;
-        height: 100%;
+        max-width: 100%;
+        height: auto; 
+        min-height: 35rem; 
     }
-    .nd-box {
-        width: 45rem;
-    }
-    .rd-box, .th-box {
-        width: 21rem;
-        height: 21rem;
+    .r-box {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -543,180 +601,8 @@ body{
    MOBILE — max 768px
 ══════════════════════════════════ */
 @media (max-width: 768px) {
-
-    /* NAV: hide links, show hamburger */
-    .nav {
+    .nav, .cat {
         display: none;
-    }
-    .cat {
-        display: none;
-    }
-
-    /* HERO: stack vertically */
-    .content-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 0 1.5rem 3rem 1.5rem;
-        align-items: center;
-    }
-    .content {
-        font-size: 52px;
-        margin-left: 0;
-    }
-    .slogan {
-        width: 100%;
-    }
-    .description {
-        width: 100%;
-        font-size: 18px;
-    }
-    .btn-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .book-btn, .meet-cats-btn {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    /* IMAGE */
-    .princess {
-        width: 100%;
-        max-width: 360px;
-        transform: rotate(0deg);
-    }
-    .content-img:hover .princess {
-        transform: scale(1.05);
-    }
-
-    /* BARISTA CARD: take out of absolute flow */
-    .rec {
-        position: relative;
-        margin-top: -5rem;
-        margin-left: 5rem;
-        transform: rotate(-2deg);
-        width: 100%;
-        max-width: 260px;
-        height: auto;
-    }
-
-    /* SECOND SECTION */
-    
-    .sec-tagline {
-        font-size: 36px;
-        width: 100%;
-        margin: 2rem 1.5rem 0 1.5rem;
-    }
-    .sec-p {
-        width: 100%;
-        margin-left: 1.5rem;
-        font-size: 18px;
-    }
-    .menu-btn {
-        margin-right: 1.5rem;
-        margin-top: 1rem;
-        font-size: 18px;
-    }
-
-    /* BOX SECTION: stack vertically */
-    .box-section {
-        flex-direction: column;
-        padding: 0 1.5rem;
-        margin-top: 2rem;
-    }
-    .sofa{
-        width: 5rem;
-    }
-    .sofa-tag{
-        font-size: 18px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-    .sofa-desc{
-        font-size: 12px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-    .wifi{
-        width: 5rem;
-    }
-    .wifi-tag{
-        font-size: 18px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-    .wifi-desc{
-        font-size: 12px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-    .text-box{
-        margin-right: 5rem;
-    }
-    .l-box {
-        width: 100%;
-        height: 300px;
-        margin: 0;
-    }
-    .cat-cover {
-        width: 100%;
-        height: 100%;
-    }
-    .r-box {
-        width: 100%;
-    }
-    .nd-box {
-        width: 90%;
-        height: auto;
-        margin-left: 0;
-        flex-direction: column;
-        padding: 1.5rem;
-    }
-    .nd-box-r {
-        justify-content: flex-start;
-        width: 100%;
-    }
-    .rd-box, .th-box {
-        width: 100%;
-        height: 13rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1.5rem 0 0 0;
-    }
-    .th-box {
-        margin-left: 1rem;
-    }
-
-    /* CATS GALLERY */
-    .trd-tagline {
-        font-size: 48px;
-        text-align: center;
-    }
-    .cat-pic {
-        width: 16rem;
-        height: 20rem;
-        
-    }
-    .dua{
-        margin-left: -4rem;
-}
-
-    /* FOOTER */
-    .footer {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .sosmed {
-        font-size: 18px;
     }
     .hamburger {
         display: flex;
@@ -724,25 +610,83 @@ body{
     .hamburger span {
         display: block;
     }
+    .content-container {
+        flex-direction: column-reverse;
+        gap: 4rem;
+        padding: 2rem 5% 4rem 5%;
+    }
+    .content {
+        font-size: 42px;
+    }
+    .princess {
+        max-width: 100%;
+    }
+    .rec {
+        position: absolute;
+        bottom: -2rem;
+        left: 25%;
+        transform: translateX(-50%) rotate(-3deg);
+    }
+    .sec-tagline {
+        font-size: 36px;
+    }
+    .sec-p {
+        font-size: 18px;
+    }
+    .l-box {
+        height: auto;
+        min-height: 28rem;
+    }
+    .text-box {
+        position: relative; 
+        margin: 2rem;
+    }
+    
+    .nd-box {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+    .nd-box-l {
+        padding: 0;
+        align-items: center;
+    }
+    .nd-box-tag {
+        margin: 0;
+    }
+    .nd-box-r {
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+    .r-box > div:last-child {
+        flex-direction: column;
+    }
+    .rd-box, .th-box {
+        height: 22rem;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
 }
+
 /* ══════════════════════════════════
    SMALL PHONE — max 480px
 ══════════════════════════════════ */
 @media (max-width: 480px) {
     .content {
-        font-size: 38px;
+        font-size: 34px;
     }
     .sec-tagline {
         font-size: 28px;
     }
     .trd-tagline {
-        font-size: 36px;
+        font-size: 32px;
     }
     .cat-pic {
-        width: 14rem;
-        height: 18rem;
-    }
-    .rd-box, .th-box {
-        height: 11rem;
+        width: 100%;
+        height: 22rem;
     }
 }
