@@ -190,7 +190,7 @@ body{
     background-color: #ffffff;
     position: absolute;
     bottom: -2rem;
-    left: -5rem;
+    left: 0rem;
     padding: 10px;
     width : 15rem;
     height: 8rem;
@@ -243,14 +243,14 @@ body{
     font-weight: bold;
     color: #26190A;
     max-width: 50rem;
-    margin: 0;
+    margin-left: 1rem;
 }
 .sec-p{
     font-size: 24px;
     max-width: 30rem;
     color: #3E2D1F;
     font-family: Chillax;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 1rem;
 }
 .menu-btn{
     color :#6F5A4E;
@@ -570,7 +570,7 @@ body{
         align-items: center;
     }
     .rec {
-        left: 50%;
+        left: 19%;
         transform: translateX(-50%) rotate(-3deg); 
         bottom: -2rem;
     }
@@ -624,7 +624,7 @@ body{
     .rec {
         position: absolute;
         bottom: -2rem;
-        left: 25%;
+        left: 30%;
         transform: translateX(-50%) rotate(-3deg);
     }
     .sec-tagline {
